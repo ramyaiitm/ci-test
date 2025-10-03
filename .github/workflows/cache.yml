@@ -1,4 +1,4 @@
-name: CI with Cache
+name: CI with Cache workflow
 
 on:
   push:
