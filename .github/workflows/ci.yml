@@ -1,16 +1,24 @@
-name: CI Test
+name: Test Email Step Action
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches:
+      - main   # Trigger the action on push to main branch
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      # Step 1: Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Step 2: Step with email in the name
       - name: 22f3002140@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+        run: echo "Hello, world! This step has my email in the name."
+
+      # Step 3: Additional step (optional)
+      - name: Run a simple command
+        run: echo "This is another step in the workflow."
