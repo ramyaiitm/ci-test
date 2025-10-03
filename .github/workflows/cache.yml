@@ -1,4 +1,4 @@
-name: CI with Cache workflow
+name: prime-cache-27f9a2c
 
 on:
   push:
